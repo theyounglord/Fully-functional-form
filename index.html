@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="styleheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/form_style.css">
+	<script defer src="js_font_awsome/all.js"></script>
+</head>
+<body>
+    <div class="alert" id="msg"></div>
+<div class="container" id="container">
+	<div class="form-container sign-up-container" id="signupForm">
+        
+		<form action="#">
+			<h1>Create Account</h1>
+			<div class="social-container">
+				<a href="#" class="socail"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your email for registration</span>
+			<input type="text" placeholder="Name" id="name" />
+			<input type="email" placeholder="Email" id="email" />
+            <input type="password" placeholder="Password" id="password" />
+            <input type="password" placeholder="Confirm Password" id="password2">
+			<button>Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container" id="signinForm">
+		<form action="#">
+			<h1>Sign in</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your account</span>
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<a href="#">Forgot your password?</a>
+			<button>Sign In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hey, Guys!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+    const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+//Custom Script////////////// for the validation part of form
+function signup(e){
+    e.preventDefault();
+   console.log('Submitted....');
+   var name =document.getElementById('name').value;
+   var email =document.getElementById('email').value;
+   var password =document.getElementById('password').value;
+   var password2 =document.getElementById('password2').value;
+
+   var msg=document.getElementById('msg');
+
+	if(name=='' || email==''||password=='' || password2==''){
+		msg.className="alert alert-danger";
+		//you have to check this part that why this is not actually working .
+		//what i want is whever the alert shows up it should be in danger color
+		msg.innerHTML='please fill out all fields';
+	} else{
+		msg.className="alert alert-success";//and this part to be in success color
+		msg.innerHTML =name+' is registered with email:'+email;
+	}	
+}
+document.getElementById('signupForm').addEventListener('submit',signup,false);
+</script>
+
+</body>
+</html>
