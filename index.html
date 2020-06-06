@@ -87,8 +87,26 @@ function signup(e){
 		//what i want is whever the alert shows up it should be in danger color
 		msg.innerHTML='please fill out all fields';
 	} else{
-		msg.className="alert alert-success";//and this part to be in success color
-		msg.innerHTML =name+' is registered with email:'+email;
+		if(name.length<3){
+			msg.innerHTML='Name must be atleast three characters';
+		} else{
+			var atpos = email.indexOf("@");
+			var dotpos = email.lastIndexOf(".");
+			if(atpos<1 || dotpos < atpos+2 || dotpos+2 >=email.length){
+				msg.innerHTML ='Please use valid email';
+			} else{
+				if(password != password2){
+					msg.innerHTML='Password do not match'
+				} else{
+					msg.innerHTML =name+' is registered with email:'+email
+				}
+				
+			}
+			//success
+
+			;
+		}
+		
 	}	
 }
 document.getElementById('signupForm').addEventListener('submit',signup,false);
