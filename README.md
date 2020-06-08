@@ -4,7 +4,7 @@
 
 Below you can see an animation that what i have created:-
 
-![App Ideas Image](./giphy.gif)
+![Animation](./giphy.gif)
 
 # :books: The Project Description
 
