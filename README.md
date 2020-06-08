@@ -6,6 +6,14 @@ Below you can see an animation that what i have created:-
 
 ![App Ideas Image](./giphy.gif)
 
-Have you ever wanted to build something but you had no idea what to do? Just as
-authors sometimes have "writers block" it's also true for developers. This list is intended to solve this issue once and for all! 👍
-Let's See.
+# :books: The Project Description
+
+Before we actually get into the code, I'd like to break down the code in sections. This will hep us to write the code in more organized way.
+
+
+We have 4 smaller **boxes** inside the main component (  the ```.container```  ):
+
+1. The Sign In form
+2. The Sign Up form
+3. The Sign In overlay
+4. The Sign Up overlay
