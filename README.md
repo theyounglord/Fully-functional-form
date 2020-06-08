@@ -1,5 +1,5 @@
 ## :thinking: Motive of Creating this Repository:-
-# As this is my first repositiry , So what the primary motive is that 
+So i have finally made my first Github repository.
 
 # :ledger: Fully Functional Double Slider Form.
 
