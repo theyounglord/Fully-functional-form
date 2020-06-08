@@ -1,5 +1,4 @@
-## :thinking: Motive of Creating this Repository:-
-So i have finally made my first Github repository.
+## Well Hello there! :wave: This repository is not only meant to showcase my Double Slider Form but also to show that how to create a repository on GitHub with some Proffesional touch to begin with.
 
 # :ledger: Fully Functional Double Slider Form.
 
