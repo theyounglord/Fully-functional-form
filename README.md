@@ -28,3 +28,84 @@ In the overlay panels we have some text and a ````button```` - by clicking it yo
 # :label: The forms animation-explained
 
 These aren't difficult to understand at all. Basically we have again two containers - the ``.form-container``s - each having a ``width`` of ``50%`` and a ``position`` - ``absolute``. We move both of them at the same time from the left to the right, and when they get behind the ``.overlay-container`` from above (while these are moving) we quickly change the ``z-index`` value so the **Sign Up** form (for example) will move on top of the **Sign In** form, and vice-versa. Magic to the eyes, but just some code logic behind!:laughing:
+
+# :clipboard: The HTML
+
+Now that we have broken down the core "functionality" of the animation, it's time to see the actual HTML code. Let's start with the basic skeleton:
+
+```html
+<div class="container" id="container">
+    <div class="form-container sign-up-container">
+        <!-- Sign Up form code goes here -->
+    </div>
+    <div class="form-container sign-in-container">
+        <!-- Sign In form code goes here -->
+    </div>
+    <div class="overlay-container">
+        <!-- The overlay code goes here -->
+    </div>
+</div>
+```
+
+The main div has a class of ``.container`` and also an id of ``container`` because we want to target this element in the JavaScript (more on this below).😉
+
+### The Sign Up form
+
+```html
+<div class="form-container sign-up-container">
+    <form action="#">
+        <h1>Create Account</h1>
+        <div class="social-container">
+            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <span>or use your email for registration</span>
+        <input type="text" placeholder="Name" />
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <button>Sign Up</button>
+    </form>
+</div>
+```
+
+### The Sign In form
+
+```html
+<div class="form-container sign-in-container">
+    <form action="#">
+        <h1>Sign in</h1>
+        <div class="social-container">
+            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <span>or use your account</span>
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <a href="#">Forgot your password?</a>
+        <button>Sign In</button>
+    </form>
+</div>
+```
+
+### The Overlay container
+
+```html
+<div class="overlay-container">
+    <div class="overlay">
+        <div class="overlay-panel overlay-left">
+            <h1>Welcome Back!</h1>
+            <p>
+                To keep connected with us please login with your personal info
+            </p>
+            <button class="ghost" id="signIn">Sign In</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+            <h1>Hello, Friend!</h1>
+            <p>Enter your personal details and start journey with us</p>
+            <button class="ghost" id="signUp">Sign Up</button>
+        </div>
+    </div>
+</div>
+```
