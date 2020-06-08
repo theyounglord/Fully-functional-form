@@ -1,8 +1,8 @@
-## Well Hello there! :wave: This repository is not only meant to showcase my Double Slider Form but also to show that how to create a repository on GitHub with some Proffesional touch to begin with.
+## Well Hello there! :wave: This repository is not only meant to showcase my Double Slider Form but to also show that how to create a repository on GitHub with some Proffesional touch to begin with.
 
 # :ledger: Fully Functional Double Slider Form.
 
-Below you can see what i have created:-
+Below you can see an animation that what i have created:-
 
 ![App Ideas Image](./giphy.gif)
 
