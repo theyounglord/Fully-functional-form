@@ -2,7 +2,7 @@
 
 # :ledger: Fully Functional Form for login and Sign Up.
 
-Below you can see an animation that what i have created:-
+Below you can see an animation of what i have created:-
 
 ![Animation](./giphy.gif)
 
