@@ -390,6 +390,4 @@ Finally! :sweat_smile::dash: We covered everything. We're done! 👏
 
 This post was a long one, wasn't it? 😅 Nevertheless, I'd hope you learned something from it. Everyone feel free to create your own version by using the code and share it with me on Instagram: [@younglord_d9](https://www.instagram.com/younglord_d9/).
 
-You can find the live version of the project we've hosted on [Github](https://theyounglord.github.io/).
-
 Thank you 🙏!
